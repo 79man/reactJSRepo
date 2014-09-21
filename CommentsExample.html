@@ -1,0 +1,37 @@
+<!-- template.html -->
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="react-0.11.2/build/react.js"></script>
+    <script src="react-0.11.2/build/JSXTransformer.js"></script>
+    <script src="jquery/jquery.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx">
+      /** @jsx React.DOM */
+      // The above declaration must remain intact at the top of the script.
+      // Your code here
+	  var CommentBox = React.createClass(
+		{
+			displayName: 'CommentBox',
+			render: function() 
+			{
+				return (
+						React.DOM.div(
+							{
+								className: "commentBox"},
+								"Hello, world! I am a CommentBox."
+							)
+						);
+			}
+		});
+	
+	React.renderComponent
+	(
+		CommentBox(null),
+		document.getElementById('content')
+	);
+    </script>
+  </body>
+</html>
